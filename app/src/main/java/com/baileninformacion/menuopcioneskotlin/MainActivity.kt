@@ -1,5 +1,6 @@
 package com.baileninformacion.menuopcioneskotlin
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -18,12 +19,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar)
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -33,13 +31,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_asir -> true
-            else -> super.onOptionsItemSelected(item)
+        var intent:Intent
+        when (item.itemId) {
+            R.id.action_asir -> intent = Intent(this,ScrollingASIR::class.java)
+            R.id.action_dam -> intent = Intent(this,ScrollingDAM::class.java)
+            R.id.action_daw -> intent = Intent(this,ScrollingDAW::class.java)
+            else -> intent = Intent(this,ScrollingASIR::class.java)
         }
+        startActivity(intent)
+        return true
     }
 
 
