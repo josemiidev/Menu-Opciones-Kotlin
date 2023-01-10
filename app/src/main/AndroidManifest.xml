@@ -13,6 +13,33 @@
         android:theme="@style/Theme.MenuOpcionesKotlin"
         tools:targetApi="31">
         <activity
+            android:name=".ScrollingDAW"
+            android:exported="false"
+            android:label="@string/title_activity_scrolling_daw"
+            android:theme="@style/Theme.MenuOpcionesKotlin.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ScrollingDAM"
+            android:exported="false"
+            android:label="@string/title_activity_scrolling_dam"
+            android:theme="@style/Theme.MenuOpcionesKotlin.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ScrollingASIR"
+            android:exported="false"
+            android:label="@string/title_activity_scrolling_asir"
+            android:theme="@style/Theme.MenuOpcionesKotlin.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
